@@ -98,7 +98,6 @@ if (eventType === 'user.updated') {
 
 if (eventType === 'user.deleted') {
   const { id } = evt.data
-
   const deletedUser = await deleteUser(id!)
 
   return NextResponse.json({ message: 'OK', user: deletedUser})
